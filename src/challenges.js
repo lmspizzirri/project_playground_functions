@@ -10,7 +10,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let result = string.split(" ");
-  return result
+  return result;
 }
 
 // Desafio 4
@@ -80,12 +80,58 @@ function fizzBuzz(array) {
   }
 
 // Desafio 9
-function encode() {
-  
+function encode(string) {
+  let array = [];
+  array = string.split("");
+  for (index = 0; index < array.length; index +=1){
+    if(array[index] === 'a'){
+      array[index] = 1;
+    }
+    else if(array[index] === 'e'){
+      array[index] = 2;
+    }
+    else if(array[index] === 'i'){
+      array[index] = 3;
+    }
+    else if(array[index] === 'o'){
+      array[index] = 4;
+    }
+    else if(array[index] === 'u'){
+      array[index] = 5;
+    }
+  }
+  result = array.toString();
+  result2 = result.replace(/,/g,'');
+  return result2;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let word = [];
+  word = string.split("");
+  for (index = 0; index < word.length; index +=1){
+    if(word[index] === '1'){
+      word[index] = 'a';
+    }
+    else if(word[index] === '2'){
+      word[index] = 'e';
+    }
+    else if(word[index] === '3'){
+      word[index] = 'i';
+    }
+    else if(word[index] === '4'){
+      word[index] = 'o';
+    }
+    else if(word[index] === '5'){
+      word[index] = 'u';
+    }
+  }
+  result = word.toString();
+  result2 = result.replace(/,/g,'');
+  return result2;
 }
+console.log(encode('hello'));
+console.log(decode('h3 th2r2!'));
+
 
 // Desafio 10
 function techList() {
