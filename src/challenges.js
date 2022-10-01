@@ -1,6 +1,21 @@
 // Desafio 1
-function compareTrue() {
+
+function compareTrue(par1,par2) {
+
+if((par1 === true) && (par2 === true)){
+  return 'true';
 }
+  else if( (par1 === true) && (par2 === false)){
+  return 'false';
+}
+  else if ((par1 === false) && (par2 === true)) {
+    return 'false';
+}
+  else if ((par1 === false) && (par2 === false)){ 
+    return 'false';
+  }
+}
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -9,7 +24,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let result = string.split(" ");
+  let result = string.spl it(" ");
   return result;
 }
 
@@ -65,7 +80,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   }
 }
-console.log(catAndMouse(-10, -7, -3));
 
 // Desafio 8
 function fizzBuzz(array) {
